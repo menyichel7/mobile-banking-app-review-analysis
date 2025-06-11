@@ -36,4 +36,4 @@ for bank, app_id in bank_apps.items():
 
 df = pd.DataFrame(all_data)
 df.drop_duplicates(subset='review', inplace=True)
-df.to_csv("cleaned_reviews.csv", index=False)
+df.to_csv("../data/raw_reviews.csv", index=False)
