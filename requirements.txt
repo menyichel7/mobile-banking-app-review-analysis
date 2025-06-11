@@ -1,1 +1,5 @@
+pandas
+google-play-scraper
+matplotlib
+seaborn
 
