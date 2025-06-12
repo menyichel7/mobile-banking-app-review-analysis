@@ -1,5 +1,9 @@
 from google_play_scraper import reviews, Sort
 import pandas as pd
+import os
+
+output_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+os.makedirs(output_dir, exist_ok=True)
 
 def scrape_reviews(app_id, bank_name):
     all_reviews = []
@@ -36,4 +40,4 @@ for bank, app_id in bank_apps.items():
 
 df = pd.DataFrame(all_data)
 df.drop_duplicates(subset='review', inplace=True)
-df.to_csv("../data/raw_reviews.csv", index=False)
+df.to_csv(os.path.join(output_dir, 'raw_reviews.csv'), index=False)
