@@ -3,3 +3,10 @@ google-play-scraper
 matplotlib
 seaborn
 
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+scikit-learn
+wordcloud
